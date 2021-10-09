@@ -79,7 +79,7 @@ Yine aynı şekilde bir FaceMeshC adında bir sınıf oluşturalım. Bunun init 
 Diğer modellerde yaptığımız gibi mp_draw nesnesini kullanarak çizim işlemini yapalım. 
 ![image](images/facem2.png)  
 # VIDEO
-
+SONUC
 Tüm bunları kullanmak için mp_models.py adında bir python dosyası oluşturalım. Burada hangi modeli kullanmak istediğimizi arg olarak verebiliriz. Örn : python mp_models.py hand ile hand detector çalışır ve gönderdiğimiz video üzerinde detect işlemi yapılır daha sonra bu video processed_videos klasörüne kaydedilir. 
 ![image](images/main1.png)   
 

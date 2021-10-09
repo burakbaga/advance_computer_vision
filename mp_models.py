@@ -18,7 +18,7 @@ def show(data,detector,name):
         if ret == True:
             img = detector.find(img)
             cv2.cvtColor(img,cv2.COLOR_RGB2BGR)
-            result.write(img)
+            # result.write(img)
             cv2.imshow("Image",img)
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
@@ -48,7 +48,7 @@ def which(which_class):
 
     elif which_class.lower()=="face_mesh":
         detector = FaceMeshC()
-        data = "videos/face2.mp4"
+        data = "videos/face3.mp4"
         show(data,detector,name="facemp1.avi")
 
 if __name__ == "__main__":

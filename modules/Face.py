@@ -42,15 +42,16 @@ class FaceMeshC():
         self.mp_face_mesh = mp.solutions.face_mesh
         self.face_mesh = self.mp_face_mesh.FaceMesh(self.static_image_mode,self.max_num_faces,
                                                     self.min_detection_confidence,self.min_tracking_confidence)
-        self.draw_spec = self.mp_drawing.DrawingSpec(thickness=1,circle_radius=3,color=(0,255,0))
-
+        self.draw_spec = self.mp_drawing.DrawingSpec(thickness=1,circle_radius=2,color=(0,255,0))
+        self.mp_drawing_styles = mp.solutions.drawing_styles
     def find(self,img,draw=True):
         imgRGB = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
         results = self.face_mesh.process(imgRGB)
         if results.multi_face_landmarks:
             for face_lms in results.multi_face_landmarks:
                 if draw:
-                    self.mp_drawing.draw_landmarks(img,face_lms,self.mp_face_mesh.FACEMESH_CONTOURS,
+                    self.mp_drawing.draw_landmarks(img,face_lms,self.mp_face_mesh.FACEMESH_RIGHT_EYE,
                     self.draw_spec,self.draw_spec)
+                    print(self.mp_face_mesh.FACEMESH_RIGHT_EYE)
                 
         return img
