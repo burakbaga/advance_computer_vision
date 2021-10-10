@@ -1,6 +1,5 @@
 import mediapipe as mp 
 import cv2 
-import time 
 
 class HandTracking():
     def __init__(self,static_image_mode=False,max_num_hands=2,min_detection_confidence=0.5,

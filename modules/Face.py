@@ -1,6 +1,5 @@
 import mediapipe as mp 
 import cv2 
-import time 
 
 class FaceDetectionC():
     def __init__(self, min_detection_confidence=0.5, model_selection=0):

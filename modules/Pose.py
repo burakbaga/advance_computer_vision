@@ -1,6 +1,5 @@
 import mediapipe as mp
 import cv2
-import time
 
 class PoseDetection():
     def __init__(self,static_image_mode=False,model_complexity=1,smooth_landmarks=True,enable_segmentation=False,
