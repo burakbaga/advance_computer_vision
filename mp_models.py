@@ -17,7 +17,7 @@ def show(data,detector,name):
         if ret == True:
             img = detector.find(img)
             cv2.cvtColor(img,cv2.COLOR_RGB2BGR)
-            cv2.imshow("Image",img)
+            cv2.imshow("Image Frame",img)
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
         else:
@@ -50,5 +50,5 @@ def which(which_class):
         show(DATA,detector,name="facemp1.avi")
 
 if __name__ == "__main__":
-    which_class = str(sys.argv[1])
+    which_class = str(sys.argv[1]) 
     which(which_class)
